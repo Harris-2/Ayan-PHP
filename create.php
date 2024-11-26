@@ -43,9 +43,9 @@
 
         $conn = new mysqli($server, $user, $password, $database);
             
-        $sql = "INSERT INTO `users` (`username`, `email`, `contact`) VALUES ('Haris', 'haris@gmail.com', '03001234567')";
+        $sql_manually = "INSERT INTO `users` (`username`, `email`, `contact`) VALUES ('Haris', 'haris@gmail.com', '03001234567')";
 
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $sql_manually);
 
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -54,9 +54,9 @@
             $contact = $_POST["contact"];
             
             
-        $sql = "INSERT INTO `users` (`username`, `email`, `contact`) VALUES ('$username', '$email', '$contact')";
+        $sql_form = "INSERT INTO `users` (`username`, `email`, `contact`) VALUES ('$username', '$email', '$contact')";
 
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $sql_form);
 
             if ($result) {
                 echo "<h1 class='text-center'> Data submitted </h1>";

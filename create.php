@@ -42,9 +42,11 @@
         $database = "webmorn";
 
         $conn = new mysqli($server, $user, $password, $database);
+            
+        $sql = "INSERT INTO `users` (`username`, `email`, `contact`) VALUES ('Haris', 'haris@gmail.com', '03001234567')";
 
+        $result = mysqli_query($conn, $sql);
 
-        // $conn->exit();
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email = $_POST["email"];

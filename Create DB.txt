@@ -1,0 +1,6 @@
+1)Create Database
+2)Create Table
+3)Connect PHP to Database
+4)Add data using Insert button of MySQL
+5)Add data manually using mysql insert query
+6)Add data by form POST method

@@ -42,12 +42,17 @@
         $database = "webmorn";
 
         $conn = new mysqli($server, $user, $password, $database);
-            
-        $sql_manually = "INSERT INTO `users` (`username`, `email`, `contact`) VALUES ('Haris', 'haris@gmail.com', '03001234567')";
+        
+        //Submit data 
+        
+        // $sql_manually = "INSERT INTO `users` (`username`, `email`, `contact`) VALUES ('Haris', 'haris@gmail.com', '03001234567')";
 
-        $result = mysqli_query($conn, $sql_manually);
+        // $result = mysqli_query($conn, $sql_manually);
+        //     if ($result) {
+        //         echo "<h1 class='text-center'> Data submitted </h1>";
+        //     }
 
-
+        //Submit DATA with FORM method
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $email = $_POST["email"];
             $username = $_POST["username"];
